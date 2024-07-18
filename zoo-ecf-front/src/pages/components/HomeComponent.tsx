@@ -1,17 +1,19 @@
-import { NextPage } from 'next'
-import HeaderComponent from './headerComponent'
-import Home1Component from './home1Component'
-import FooterComponent from './FooterComponent'
+import { NextPage } from "next";
+import HeaderComponent from "./headerComponent";
+import Home1Component from "./BodyComponent";
+import FooterComponent from "./FooterComponent";
+import BodyComponent from "./BodyComponent";
 
 interface Props {}
 
 const HomeComponent: NextPage<Props> = ({}) => {
-  return <div>
-    <HeaderComponent />
-    <Home1Component/>
-    <FooterComponent/>
+  return (
+    <div>
+      <HeaderComponent />
+      <BodyComponent />
+      <FooterComponent />
+    </div>
+  );
+};
 
-  </div>
-}
-
-export default HomeComponent
+export default HomeComponent;

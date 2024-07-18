@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class SecurityService {
-    public static async authenticateUser(username: string, password: string) {
+    private static async authenticateUser(username: string, password: string) {
         const url = 'http://localhost:3010/security';
 
         const data = {
@@ -29,6 +29,14 @@ class SecurityService {
         } catch (error) {
             console.error('error occured : ', error);
             throw error;
+        }
+    }
+
+    public static async login(username: string, password: string) {
+        const token = await this.authenticateUser(username, password);
+        if (token) {
+            localStorage.setItem('token', JSON.stringify(token));
+            return true;
         }
     }
 }

@@ -1,11 +1,16 @@
 import { NextPage } from 'next'
-import MainMenuComponent from './MainMenuComponent'
+import HeaderComponent from './headerComponent'
+import Home1Component from './home1Component'
+import FooterComponent from './FooterComponent'
 
 interface Props {}
 
 const HomeComponent: NextPage<Props> = ({}) => {
   return <div>
-    <MainMenuComponent />
+    <HeaderComponent />
+    <Home1Component/>
+    <FooterComponent/>
+
   </div>
 }
 

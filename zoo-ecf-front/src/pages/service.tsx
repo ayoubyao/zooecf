@@ -40,12 +40,12 @@ const Restauration: NextPage<Props> = ({}) => {
             <CardElement
               title={"Visite des habitats avec un guide"}
               sourceImage={""}
-              lien={"/viste-habitat"}
+              lien={"/servicesDetails?title=Visite des habitats avec un guide"}
             />
             <CardElement
               title={"Restauration"}
               sourceImage={""}
-              lien={"/restauration"}
+              lien={"/servicesDetails?title=Restauration"}
             />
           </div>
         </div>

@@ -35,17 +35,17 @@ const Restauration: NextPage<Props> = ({}) => {
             <CardElement
               title={"Visite du zoo en train"}
               sourceImage={""}
-              lien={"/servicesDetails?title=Visite du zoo en train"}
+              lien={"/servicesDetails?title=Visite du zoo en train&idService=1"}
             />
             <CardElement
               title={"Visite des habitats avec un guide"}
               sourceImage={""}
-              lien={"/servicesDetails?title=Visite des habitats avec un guide"}
+              lien={"/servicesDetails?title=Visite des habitats avec un guide&idservice=2"}
             />
             <CardElement
               title={"Restauration"}
               sourceImage={""}
-              lien={"/servicesDetails?title=Restauration"}
+              lien={"/servicesDetails?title=Restauration&idservice=3"}
             />
           </div>
         </div>

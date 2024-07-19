@@ -1,11 +1,12 @@
 import { NextPage } from "next";
-import Link from "next/link";
+
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import HeaderComponent from "./components/headerComponent";
-import CardAnimal from "./components/cardElement";
+
 import FooterComponent from "./components/FooterComponent";
 import CardElement from "./components/cardElement";
+import React from "react";
 
 interface IHabitatDetails {}
 
@@ -64,9 +65,12 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
   }, []);
 
   return (
+    
     <>
+    <React.Fragment>
+         <HeaderComponent />
       <div>
-        <HeaderComponent />
+   
         <br />
         <div>
           <br />
@@ -120,6 +124,7 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
         </div>
       </div>{" "}
       <FooterComponent />
+      </React.Fragment>
     </>
   );
 };

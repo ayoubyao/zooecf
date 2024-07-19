@@ -23,7 +23,7 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
   useEffect(() => {
     switch (idHabitat) {
       //Jungle
-      case "1":
+      case "3":
         setDescriptionGeneral(
           "En explorant notre jungle, vous pénétrerez dans un royaume aussi luxuriant que mystérieux, plongeant profondément au cœur de la nature sauvage."
         );
@@ -49,7 +49,7 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
         break;
 
       //Marais
-      case "3":
+      case "4":
         setDescriptionGeneral(
           "L'habitat Marais est une énigme végétale et animale qui offre à ses visiteurs un véritable voyage dans les profondeurs des récifs d'eau."
         );
@@ -65,65 +65,63 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
   }, []);
 
   return (
-    
     <>
-    <React.Fragment>
-         <HeaderComponent />
-      <div>
-   
-        <br />
+      <React.Fragment>
+        <HeaderComponent />
         <div>
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <p className="text-4xl font-black text-gray-900 dark:text-white">
-            {title}
-          </p>
-          <br />
-          <br />
-          <img
-            className="h-auto max-w-full"
-            src={"habitats/" + picture}
-            alt=""
-          />
-          <br />
-          <p className="mb-3 text-black-500 dark:text-black-400">
-            {descriptionGeneral}
-          </p>
-          <p className="mb-3 text-black-500 dark:text-black-400">
-            {descriptionAnimaux}
-          </p>
-          <p className="mb-3 text-black-500 dark:text-black-400">
-            {description}
-          </p>
-          <br />
-        </div>
-        <div className="grid grid-cols-3 gap-4">
-          <CardElement
-            title={"Panda roux | Rox"}
-            sourceImage={"animaux/animal1.png"}
-            lien={""}
-          />
-          <CardElement
-            title={'PANDOUDOU "Panda"'}
-            sourceImage={"animaux/panda.png"}
-            lien={""}
-          />
-          <CardElement
-            title={"MATOU 'Panthère noir'"}
-            sourceImage={"animaux/penthere.png"}
-            lien={""}
-          />
-          <CardElement
-            title={"Gorille 'Kong'"}
-            sourceImage={"animaux/gorille.png"}
-            lien={""}
-          />
-        </div>
-      </div>{" "}
-      <FooterComponent />
+          <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p className="text-4xl font-black text-gray-900 dark:text-white">
+              {title}
+            </p>
+            <br />
+            <br />
+            <img
+              className="h-auto max-w-full"
+              src={"habitats/" + picture}
+              alt=""
+            />
+            <br />
+            <p className="mb-3 text-black-500 dark:text-black-400">
+              {descriptionGeneral}
+            </p>
+            <p className="mb-3 text-black-500 dark:text-black-400">
+              {descriptionAnimaux}
+            </p>
+            <p className="mb-3 text-black-500 dark:text-black-400">
+              {description}
+            </p>
+            <br />
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <CardElement
+              title={"Panda roux | Rox"}
+              sourceImage={"animaux/animal1.png"}
+              lien={""}
+            />
+            <CardElement
+              title={'PANDOUDOU "Panda"'}
+              sourceImage={"animaux/panda.png"}
+              lien={""}
+            />
+            <CardElement
+              title={"MATOU 'Panthère noir'"}
+              sourceImage={"animaux/penthere.png"}
+              lien={""}
+            />
+            <CardElement
+              title={"Gorille 'Kong'"}
+              sourceImage={"animaux/gorille.png"}
+              lien={""}
+            />
+          </div>
+        </div>{" "}
+        <FooterComponent />
       </React.Fragment>
     </>
   );

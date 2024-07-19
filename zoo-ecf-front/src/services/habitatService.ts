@@ -1,19 +1,15 @@
+import { environment } from '@/environnement/environnement';
+import { Habitat } from '@/models/habitat';
 import axios from 'axios';
 
-const API_URL = 'https://api.example.com'; // Replace with your API URL
 
-export interface Habitat {
-    id: number;
-    name: string;
-    location: string;
-    capacity: number;
-}
+
 
 export class HabitatService {
     constructor() {
 
     }
-    GetHeader() {
+    static GetHeader() {
         const token = JSON.parse(localStorage.getItem('token') ?? '');
         const headers: any = {
             "Content-Type": "application/json",
@@ -22,14 +18,26 @@ export class HabitatService {
         return headers;
     }
 
-    async getHabitats(): Promise<Habitat[]> {
-        let headers = this.GetHeader();
+    static async getHabitats(): Promise<Habitat[]> {
+        let headers = HabitatService.GetHeader();
         try {
-            const response = await axios.get(`${API_URL}/habitats`,
+
+            return await axios.get(`${environment.apiUrl}/habitat`,
                 {
                     headers: headers,
+                }).then((response) => {
+                    const result: Habitat[] = response.data;
+                    for (let i = 0; i < result.length; i++) {
+                        result[i].imagePrincipal = response.data[i].image_data;
+                    }
+                    if (result) {
+                        return result
+                    } else {
+                        return [];
+                    }
+
                 });
-            return response.data;
+
         } catch (error) {
             console.error('Error while fetching habitats:', error);
             throw error;
@@ -38,7 +46,7 @@ export class HabitatService {
 
     async getHabitat(id: number): Promise<Habitat> {
         try {
-            const response = await axios.get(`${API_URL}/habitats/${id}`);
+            const response = await axios.get(`${environment.apiUrl}/habitats/${id}`);
             return response.data;
         } catch (error) {
             console.error('Error while fetching habitat:', error);

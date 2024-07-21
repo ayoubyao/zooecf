@@ -1,6 +1,6 @@
 import axios from "axios";
 
-class SecurityService {
+export class SecurityService {
     private static async authenticateUser(username: string, password: string) {
         const url = 'http://localhost:3010/security';
 
@@ -32,8 +32,8 @@ class SecurityService {
         }
     }
 
-    public static async login(username: string, password: string) {
-        const token = await this.authenticateUser(username, password);
+    public static async login() {
+        const token = await this.authenticateUser("ayoub", "ayoub123");
         if (token) {
             localStorage.setItem('token', JSON.stringify(token));
             return true;

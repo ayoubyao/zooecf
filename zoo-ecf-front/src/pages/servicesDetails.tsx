@@ -1,56 +1,77 @@
 import type { NextPage } from "next";
 
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import HeaderComponent from "./components/headerComponent";
 import Link from "next/link";
-import router from "next/router";
+import router, { useRouter } from "next/router";
+import { ServiceService } from "@/services/serviceService";
 
 export interface IServicesDetailsProps {}
 
 const ServicesDetails: NextPage<IServicesDetailsProps> = (props) => {
+  const router = useRouter();
+  const [descriptionGeneral, setDescriptionGeneral] = useState("");
+  const [descriptionService, setDescriptionService] = useState("");
+  const [description, setDescription] = useState("");
+  const [picture, setPicture] = useState("");
+
   const { title } = router.query;
+  const { idservice } = router.query;
+
+  useEffect(() => {
+    if(idservice) {
+      ServiceService.getService(+idservice).then((service) => {
+        if(service)
+        {
+          setPicture(service.image_data)
+          setDescriptionGeneral(service.description_general)
+          setDescriptionService(service.description_service)
+        }
+        
+      })
+    }
+    
+  }, []);
+
+  
   return (
     <React.Fragment>
       <HeaderComponent />
-      <div>
+      <div
+        style={{
+          marginTop: "2%",
+        }}
+      >
         <br />
+
         <br />
         <br />
         <Link
-          href="#"
+          href="service"
           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
         >
           Services
         </Link>
         /
-        <Link
-          href="#"
-          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-        >
-          title
-        </Link>
-        <br />
-        <br />
         <p className="text-4xl font-black text-gray-900 dark:text-white">
-          Visite du zoo en train
+          {title}
+        </p>
+        <br />
+        <img
+              className="h-auto max-w-full"
+              src={"services/" + picture}
+              alt=""
+            />
+        <br />
+        <p className="mb-3 text-black-500 dark:text-black-400">
+          {descriptionGeneral}
         </p>
         <br />
         <p className="mb-3 text-black-500 dark:text-black-400">
-          Embarquez pour une aventure unique avec notre passionnant voyage à
-          travers le zoo en train.
+          {descriptionService}
         </p>
         <p className="mb-3 text-black-500 dark:text-black-400">
-          Profitez du confort du train tout en explorant les divers habitats et
-          en observant de près nos incroyables animaux.
-        </p>
-        <p className="mb-3 text-black-500 dark:text-black-400">
-          Notre guide expert partagera des informations fascinantes sur chaque
-          espèce, vous offrant une expérience éducative et divertissante.
-        </p>
-        <p className="mb-3 text-black-500 dark:text-black-400">
-          Détendez-vous et laissez-vous emporter par cette visite inoubliable du
-          zoo, une manière pittoresque et enrichissante de découvrir la
-          diversité de la vie animale, tout cela à bord de notre train exclusif.
+          {description}
         </p>
       </div>
     </React.Fragment>

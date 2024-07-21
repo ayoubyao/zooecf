@@ -52,7 +52,7 @@ const Restauration: NextPage<Props> = ({}) => {
               href={
                 "/habitatDetails?title=" +
                 habitats.nom +
-                "&idHabitat=" +
+                "&idhabitat=" +
                 habitats.habitat_id
               }
               className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
@@ -65,7 +65,7 @@ const Restauration: NextPage<Props> = ({}) => {
                 Découvrir cette habitat
               </p>
               <br />
-              <img src={"habitats/" + habitats.imagePrincipal} alt="" />{" "}
+              <img src={"habitats/" + habitats.image_data} alt="" />{" "}
               {/* Replace <img> with <Image> */}
             </Link>
           ))}

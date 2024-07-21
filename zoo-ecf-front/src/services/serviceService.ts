@@ -1,19 +1,16 @@
+import { environment } from '@/environnement/environnement';
+import { Service } from '@/models/service';
 import axios from 'axios';
 
 const API_URL = 'https://api.example.com'; // Replace with your API URL
 
-export interface Services {
-    id: number;
-    name: string;
-    location: string;
-    capacity: number;
-}
+
 
 export class ServiceService {
     constructor() {
 
     }
-    GetHeader() {
+    static GetHeader() {
         const token = JSON.parse(localStorage.getItem('token') ?? '');
         const headers: any = {
             "Content-Type": "application/json",
@@ -22,24 +19,44 @@ export class ServiceService {
         return headers;
     }
 
-    async getServices(): Promise<Services[]> {
-        let headers = this.GetHeader();
-        try {
-            const response = await axios.get(`${API_URL}/services`,
-                {
-                    headers: headers,
-                });
-            return response.data;
-        } catch (error) {
-            console.error('Error while fetching services:', error);
-            throw error;
-        }
-    }
+    static async getServices(): Promise<Service[]> {
+        let headers = ServiceService.GetHeader();
+    
+    try {
 
-    async getService(id: number): Promise<Services> {
+        return await axios.get(`${environment.apiUrl}/service`,
+            {
+                headers: headers,
+            }).then((response) => {
+                const result: Service[] = response.data;
+                for (let i = 0; i < result.length; i++) {
+                    result[i].imagePrincipal = response.data[i].image_data;
+                }
+                if (result) {
+                    return result
+                } else {
+                    return [];
+                }
+
+            });
+
+    } catch (error) {
+        console.error('Error while fetching habitats:', error);
+        throw error;
+    }
+}
+
+    static async getService(id: number): Promise<Service> {
+        let headers = ServiceService.GetHeader();
+
         try {
-            const response = await axios.get(`${API_URL}/services/${id}`);
-            return response.data;
+            const response = await axios.get(`${environment.apiUrl}/service/${id}`,{
+                headers: headers,
+            });
+            const service:Service = response.data.service;
+
+            return service;
+
         } catch (error) {
             console.error('Error while fetching Services:', error);
             throw error;

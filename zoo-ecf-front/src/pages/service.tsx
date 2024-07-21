@@ -1,9 +1,13 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeaderComponent from "./components/headerComponent";
 import CardElement from "./components/cardElement";
 import FooterComponent from "./components/FooterComponent";
+import Link from "next/link";
+import { ServiceService } from "@/services/serviceService";
+import { Service } from "@/models/service";
+import { title } from "process";
 
 interface Props {}
 
@@ -11,6 +15,14 @@ const Restauration: NextPage<Props> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
+  const [services, setServices] = useState([] as Service[]);
+
+  useEffect(() => {
+    ServiceService.getServices().then((res) => {
+      setServices(res as Service[]);
+    });
+  }, []);
+  
   return (
     <>
       <div
@@ -32,23 +44,14 @@ const Restauration: NextPage<Props> = ({}) => {
           </p>
           <br />
           <div className="grid grid-cols-3 gap-1">
+          {services.map((services) => (
             <CardElement
-              title={"Visite du zoo en train"}
-              sourceImage={""}
-              lien={"/servicesDetails?title=Visite du zoo en train&idservice=1"}
+              title={services.nom}
+              sourceImage={"services/" + services.imagePrincipal}
+              lien={"/servicesDetails?title=" + services.nom + "&idservice=" + services.service_id}
             />
-            <CardElement
-              title={"Visite des habitats avec un guide"}
-              sourceImage={""}
-              lien={
-                "/servicesDetails?title=Visite des habitats avec un guide&idservice=2"
-              }
-            />
-            <CardElement
-              title={"Restauration"}
-              sourceImage={""}
-              lien={"/servicesDetails?title=Restauration&idservice=3"}
-            />
+          ))}
+            
           </div>
         </div>
       </div>

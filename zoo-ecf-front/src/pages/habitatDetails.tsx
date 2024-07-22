@@ -77,6 +77,9 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
               {description}
             </p>
             <br />
+            <br />
+            <br />
+            <br />
           </div>
           <div className="grid grid-cols-3 gap-4">
             {animaux.map((animal) => (

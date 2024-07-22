@@ -7,18 +7,18 @@ const BodyComponent: NextPage<Props> = ({}) => {
   return (
     <div>
       <div>
-        <p className="text-4xl font-black text-gray-900 dark:text-white">
+        <p className="text-4xl font-black text-green-900 dark:text-green">
           Le Zoo Arcadia
         </p>
         <br />
-        <p className="mb-3 text-black-500 dark:text-black-400">
+        <p className="mb-3 text-green-900 dark:text-black-400">
           Fondé en 1960, notre zoo offre une immersion authentique dans le monde
           naturel avec une collection d&apos;animaux exceptionnels répartis sur
           différents habitats, y compris la savane africaine vibrante,
           l&apos;introspection dense de la jungle et les eaux tranquilles des
           marais.
         </p>
-        <p className="mb-3 text-black-500 dark:text-black-400">
+        <p className="mb-3 text-green-900 dark:text-black-400">
           Notre engagement pour le bien-être animal est une priorité absolue,
           avec des équipes expertes qui se déplacent quotidiennement au zoo pour
           effectuer des contrôles médicaux préventifs et garantir un
@@ -28,7 +28,7 @@ const BodyComponent: NextPage<Props> = ({}) => {
           seulement une attraction locale - c&apos;est maintenant la porte vers
           un voyage sans limite dans le monde animal.
         </p>
-        <p className="mb-3 text-black-500 dark:text-black-400">
+        <p className="mb-3 text-green-900 dark:text-green-400">
           Nous avons hâte de vous accueillir au zoo Arcadia pour une aventure
           épique, des rencontres inoubliables et des leçons d&apos;écologie qui
           vont changer votre vie. Découvrez nos parcours animaliers avec nous
@@ -40,16 +40,16 @@ const BodyComponent: NextPage<Props> = ({}) => {
         <br />
       </div>
 
-      <div className="max-w-sm p-7 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="max-w-sm p-7 bg-white border border-green-200 rounded-lg shadow dark:bg-green-800 dark:border-green-700">
         <Link href="/service">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-green">
             Découvrez nos Services
           </h5>
         </Link>
         <br />
         <Link
           href="/service"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
         >
           Voir les services
           <svg
@@ -71,7 +71,7 @@ const BodyComponent: NextPage<Props> = ({}) => {
       </div>
       <br />
       <br />
-      <p className="text-4xl font-black text-gray-900 dark:text-white">
+      <p className="text-4xl font-black text-green-900 dark:text-white">
         Les Habitats
       </p>
       <br />
@@ -102,12 +102,12 @@ const BodyComponent: NextPage<Props> = ({}) => {
       <div className="grid grid-cols-3 gap-4">
         <Link
           href="/savane"
-          className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          className="block max-w-sm p-6 bg-white border border-green-200 rounded-lg shadow hover:bg-green-100 dark:bg-green-800 dark:border-green-700 dark:hover:bg-green-700"
         >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">
             Savane
           </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
+          <p className="font-normal text-green-700 dark:text-green-400">
             Découvrir cette habitat
           </p>
           <br />
@@ -116,12 +116,12 @@ const BodyComponent: NextPage<Props> = ({}) => {
 
         <Link
           href="/marias"
-          className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          className="block max-w-sm p-6 bg-white border border-green-200 rounded-lg shadow hover:bg-green-100 dark:bg-green-800 dark:border-green-700 dark:hover:bg-green-700"
         >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">
             Marais
           </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
+          <p className="font-normal text-green-700 dark:text-green-400">
             {" "}
             Découvrir cette habitat.
           </p>
@@ -131,12 +131,12 @@ const BodyComponent: NextPage<Props> = ({}) => {
 
         <Link
           href="/jungle"
-          className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          className="block max-w-sm p-6 bg-white border border-green-200 rounded-lg shadow hover:bg-green-100 dark:bg-green-800 dark:border-green-700 dark:hover:bg-green-700"
         >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">
             Jungle
           </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
+          <p className="font-normal text-green-700 dark:text-green-400">
             {" "}
             Découvrir cette habitat.
           </p>
@@ -145,16 +145,16 @@ const BodyComponent: NextPage<Props> = ({}) => {
         </Link>
       </div>
       <br />
-      <div className="max-w-sm p-7 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="max-w-sm p-7 bg-white border border-green-200 rounded-lg shadow dark:bg-green-800 dark:border-green-700">
         <Link href="/habitat">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">
             D&apos;autres habitats à découvrir
           </h5>
         </Link>
         <br />
         <Link
           href="/habitat"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
         >
           Voir tout les habitats
           <svg
@@ -180,16 +180,16 @@ const BodyComponent: NextPage<Props> = ({}) => {
         <img className="h-auto max-w-full" src="panda.png" alt="" />
       </div>
       <br />
-      <div className="max-w-sm p-7 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="max-w-sm p-7 bg-white border border-green-200 rounded-lg shadow dark:bg-green-800 dark:border-green-700">
         <Link href="">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-white">
             Laissez-nous votre avis
           </h5>
         </Link>
         <br />
         <Link
           href="#"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
         >
           Laisser un avis
           <svg
@@ -212,12 +212,12 @@ const BodyComponent: NextPage<Props> = ({}) => {
       </div>
       <br />
       <div className="relative overflow-x-auto">
-        <p className="text-4xl font-black text-gray-900 dark:text-white">
+        <p className="text-4xl font-black text-green-900 dark:text-white">
           Horaires d&apos;ouverture
         </p>
         <br />
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left rtl:text-right text-green-500 dark:text-green-400">
+          <thead className="text-xs text-green-700 uppercase bg-green-50 dark:bg-green-700 dark:text-green-400">
             <tr>
               <th scope="col" className="px-6 py-3">
                 Jour
@@ -228,64 +228,64 @@ const BodyComponent: NextPage<Props> = ({}) => {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Lundi
               </th>
               <td className="px-6 py-4">08h30 - 18h30</td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Mardi
               </th>
               <td className="px-6 py-4">08h30 - 18h30</td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700 ">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Mercredi
               </th>
               <td className="px-6 py-4">08h30 - 18h30</td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Jeudi
               </th>
               <td className="px-6 py-4">08h30 - 18h30</td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Vendredi
               </th>
               <td className="px-6 py-4">08h30 - 18h30</td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Samedi
               </th>
               <td className="px-6 py-4">08h30 - 18h30</td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-green-800 dark:border-green-700">
               <th
                 scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="px-6 py-4 font-medium text-green-900 whitespace-nowrap dark:text-white"
               >
                 Dimanche
               </th>

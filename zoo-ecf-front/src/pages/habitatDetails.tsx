@@ -81,6 +81,7 @@ const HabitatDetails: NextPage<IHabitatDetails> = (props) => {
           <div className="grid grid-cols-3 gap-4">
             {animaux.map((animal) => (
               <CardElement
+                key={animal.animal_id}
                 title={animal.prenom}
                 sourceImage={"animaux/"+animal.image_data}
                 lien={"/animalDetails?animal_id=" + animal.animal_id}

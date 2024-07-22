@@ -46,6 +46,7 @@ const Restauration: NextPage<Props> = ({}) => {
           <div className="grid grid-cols-3 gap-1">
           {services.map((services) => (
             <CardElement
+              key={services.service_id}
               title={services.nom}
               sourceImage={"services/" + services.imagePrincipal}
               lien={"/servicesDetails?title=" + services.nom + "&idservice=" + services.service_id}

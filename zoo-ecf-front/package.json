@@ -2,6 +2,10 @@
   "name": "zoo-ecf-front",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20",
+    "npm": "6"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

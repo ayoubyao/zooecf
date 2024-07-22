@@ -38,7 +38,7 @@ const Restauration: NextPage<Props> = ({}) => {
             Explorez les divers services offerts au sein du Zoo Arcadia.
           </p>
 
-          <p className="text-4xl font-black text-gray-900 dark:text-white">
+          <p className="text-4xl font-black text-green-900 dark:text-white">
             Tous nos services
           </p>
           <br />

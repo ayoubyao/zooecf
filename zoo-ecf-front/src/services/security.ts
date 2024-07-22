@@ -1,8 +1,9 @@
+import { environment } from "@/environnement/environnement";
 import axios from "axios";
 
 export class SecurityService {
     private static async authenticateUser(username: string, password: string) {
-        const url = 'http://localhost:3010/security';
+        const url = `${environment.apiUrl}/security`;
 
         const data = {
             username: username,
